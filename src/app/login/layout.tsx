@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "APP",
+  title: "LOGIN",
   description: "TAHFIDZ APP",
 };
 
@@ -16,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={montserrat.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
