@@ -20,6 +20,7 @@ export const users = pgTable("user", {
   kelas: text("kelas"),
   email: text("email").unique(),
   whatsapp: text("whatsapp"),
+  role: text("role").default("user"),
   emailVerified: timestamp("emailVerified", { mode: "date" }),
   image: text("image"),
 });

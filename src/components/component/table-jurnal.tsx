@@ -78,7 +78,7 @@ export default function TableJurnal({ data }: { data: Array<object_jurnal> }) {
           Jurnal Tahfidz Quran Saya
         </CardTitle>
         <Button className="bg-slate-800 w-fit m-auto text-white">
-          <Link href={"/jurnal"}>TAMBAH JURNAL</Link>
+          <Link href={"/"}>TAMBAH JURNAL</Link>
         </Button>
       </CardHeader>
       <CardContent>
