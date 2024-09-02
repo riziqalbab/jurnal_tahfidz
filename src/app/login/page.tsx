@@ -1,3 +1,4 @@
+import { signIn } from "@/auth";
 import { Login } from "@/components/component/login";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,12 +21,19 @@ function page() {
               Masuk ke akun Anda menggunakan Google.
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <Button className="w-full bg-white">
-              <GoogleLogo />
-              Login dengan Google
-            </Button>
-          </CardContent>
+          <form
+            action={async () => {
+              "use server";
+              await signIn("google");
+            }}
+          >
+            <CardContent>
+              <Button className="w-full bg-white">
+                <GoogleLogo />
+                Login dengan Google
+              </Button>
+            </CardContent>
+          </form>
           <CardFooter className="flex justify-center">
             <p className="text-sm text-muted-foreground"></p>
           </CardFooter>
