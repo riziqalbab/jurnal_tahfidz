@@ -5,71 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1725243614637,
-      "tag": "0000_brainy_sugar_man",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1725243953913,
-      "tag": "0001_open_wrecker",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1725249604523,
-      "tag": "0002_black_puff_adder",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1725253637104,
-      "tag": "0003_secret_anita_blake",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1725259987033,
-      "tag": "0004_yielding_tony_stark",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "7",
-      "when": 1725260168362,
-      "tag": "0005_fat_human_torch",
-      "breakpoints": true
-    },
-    {
-      "idx": 6,
-      "version": "7",
-      "when": 1725260259482,
-      "tag": "0006_tricky_freak",
-      "breakpoints": true
-    },
-    {
-      "idx": 7,
-      "version": "7",
-      "when": 1725260922985,
-      "tag": "0007_oval_korvac",
-      "breakpoints": true
-    },
-    {
-      "idx": 8,
-      "version": "7",
-      "when": 1725261394684,
-      "tag": "0008_icy_the_executioner",
-      "breakpoints": true
-    },
-    {
-      "idx": 9,
-      "version": "7",
-      "when": 1725261409786,
-      "tag": "0009_wakeful_magneto",
+      "when": 1725264229871,
+      "tag": "0000_melted_hellcat",
       "breakpoints": true
     }
   ]

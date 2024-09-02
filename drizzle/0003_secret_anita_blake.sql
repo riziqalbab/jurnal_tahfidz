@@ -1,1 +1,0 @@
-ALTER TABLE "jurnal_user" ADD COLUMN "catatan" text;

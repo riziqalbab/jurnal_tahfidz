@@ -1,5 +1,5 @@
 {
-  "id": "4714ffe7-3e2d-49d3-bede-d4b6c5f1f8ac",
+  "id": "2603376e-8563-46e1-b22b-c211cc32a383",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -190,6 +190,67 @@
         }
       }
     },
+    "public.jurnal_user": {
+      "name": "jurnal_user",
+      "schema": "",
+      "columns": {
+        "jurnal_id": {
+          "name": "jurnal_id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "id_user": {
+          "name": "id_user",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "surah": {
+          "name": "surah",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ayat": {
+          "name": "ayat",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "catatan": {
+          "name": "catatan",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tanggal": {
+          "name": "tanggal",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "jurnal_user_id_user_user_id_fk": {
+          "name": "jurnal_user_id_user_user_id_fk",
+          "tableFrom": "jurnal_user",
+          "tableTo": "user",
+          "columnsFrom": [
+            "id_user"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "public.session": {
       "name": "session",
       "schema": "",
@@ -248,8 +309,26 @@
           "primaryKey": false,
           "notNull": false
         },
+        "nis": {
+          "name": "nis",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "kelas": {
+          "name": "kelas",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "email": {
           "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "whatsapp": {
+          "name": "whatsapp",
           "type": "text",
           "primaryKey": false,
           "notNull": false

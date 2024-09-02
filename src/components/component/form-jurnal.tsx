@@ -35,6 +35,7 @@ import Select from "react-select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "../ui/toaster";
+import Link from "next/link";
 
 export function FormJurnal() {
   const surahOption = [
@@ -182,9 +183,9 @@ export function FormJurnal() {
       })
         .then((response) => response.json())
         .then((data) => {
-          // setAyat("");
+          setAyat("");
           // setSurah("");
-          // setCatatan("");
+          setCatatan("");
           toast({
             title: "BEHRHASIL MENAMBAHKAN JURNAL",
             description: "Semoga istiqomah :)",
@@ -248,6 +249,9 @@ export function FormJurnal() {
           </Button>
         </CardFooter>
       </form>
+      <Button className="bg-slate-900 text-white w-full">
+        <Link href={"/jurnal"}>LIHAT JURNAL</Link>
+      </Button>
     </Card>
   );
 }

@@ -9,6 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 // Define the structure of a journal entry
 interface JournalEntry {
@@ -58,13 +60,26 @@ const journalEntries: JournalEntry[] = [
   },
 ];
 
-export default function TableJurnal() {
+interface object_jurnal {
+  id: string;
+  ayat: number;
+  surah: string;
+  catatan: string;
+  tanggal: string;
+}
+
+export default function TableJurnal({ data }: { data: Array<object_jurnal> }) {
+  // console.log(/);
+
   return (
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
           Jurnal Tahfidz Quran Saya
         </CardTitle>
+        <Button className="bg-slate-800 w-fit m-auto text-white">
+          <Link href={"/jurnal"}>TAMBAH JURNAL</Link>
+        </Button>
       </CardHeader>
       <CardContent>
         <Table>
@@ -78,7 +93,7 @@ export default function TableJurnal() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {journalEntries.map((entry) => (
+            {data.map((entry) => (
               <TableRow key={entry.id}>
                 <TableCell className="font-medium">{entry.surah}</TableCell>
                 <TableCell>{entry.ayat}</TableCell>
