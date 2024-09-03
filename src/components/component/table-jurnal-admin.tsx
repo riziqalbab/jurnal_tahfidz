@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -20,18 +20,41 @@ interface object_jurnal {
   tanggal: string;
 }
 
-export default function TableJurnal({ data }: { data: Array<object_jurnal> }) {
-  // console.log(/);
+export default function TableJurnalAdmin({
+  data,
+  nama,
+  kelas,
+}: {
+  data: Array<object_jurnal>;
+  nama: string | null;
+  kelas: string | null;
+}) {
+  const [data_jurnal, setDataJurnal] = useState<Array<object_jurnal>>();
+
+  useEffect(() => {
+    setDataJurnal(data);
+  }, [data]);
 
   return (
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">
-          Jurnal Tahfidz Quran Saya
+          Jurnal Tahfidz Quran {nama?.toUpperCase()} <br />
+          <span className="font-semibold text-lg">{kelas?.toUpperCase()}</span>
         </CardTitle>
-        <Button className="bg-slate-800 w-fit m-auto text-white">
-          <Link href={"/"}>TAMBAH JURNAL</Link>
-        </Button>
+        <div className="m-auto">
+          <Button className="bg-slate-800 w-fit mx-2 text-white print:hidden">
+            <Link href={"/admin"}>KEMBALI</Link>
+          </Button>
+          <Button
+            className="bg-slate-800 w-fit mx-2 text-white print:hidden"
+            onClick={() => {
+              window.print();
+            }}
+          >
+            PRINT
+          </Button>
+        </div>
       </CardHeader>
       <CardContent>
         <Table>
@@ -45,7 +68,7 @@ export default function TableJurnal({ data }: { data: Array<object_jurnal> }) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((entry) => (
+            {data_jurnal?.map((entry) => (
               <TableRow key={entry.id}>
                 <TableCell className="font-medium">{entry.surah}</TableCell>
                 <TableCell>{entry.ayat}</TableCell>

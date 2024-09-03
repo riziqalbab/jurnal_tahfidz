@@ -1,1 +1,1 @@
-ALTER TABLE "user" ADD COLUMN "role" text DEFAULT 'user';
+-- ALTER TABLE "user" ADD COLUMN "role" text DEFAULT 'user';
