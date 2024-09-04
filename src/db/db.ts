@@ -9,3 +9,4 @@ export const client = new Client({
 client.connect();
 const db = drizzle(client);
 export default db;
+//
