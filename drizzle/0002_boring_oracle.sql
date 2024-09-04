@@ -1,0 +1,1 @@
+ALTER TABLE "jurnal_user" ALTER COLUMN "ayat" SET DATA TYPE text;

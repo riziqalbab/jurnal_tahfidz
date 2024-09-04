@@ -29,7 +29,7 @@ export const jurnal_user = pgTable("jurnal_user", {
   id: serial("jurnal_id").primaryKey(),
   id_user: text("id_user").references(() => users.id),
   surah: text("surah"),
-  ayat: integer("ayat"),
+  ayat: text("ayat"),
   catatan: text("catatan"),
   tanggal: date("tanggal").notNull().defaultNow(),
 });

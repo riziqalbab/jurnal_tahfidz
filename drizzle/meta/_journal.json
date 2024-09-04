@@ -15,6 +15,13 @@
       "when": 1725267426128,
       "tag": "0001_certain_ma_gnuci",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725423815075,
+      "tag": "0002_boring_oracle",
+      "breakpoints": true
     }
   ]
 }

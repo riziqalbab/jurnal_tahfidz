@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 
 interface object_jurnal {
   id: string;
-  ayat: number;
+  ayat: string;
   surah: string;
   catatan: string;
   tanggal: string;
